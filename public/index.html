@@ -1,0 +1,1868 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>
+    Boca Raton Billygoats | Road to Cooperstown
+  </title>
+
+  <meta
+    name="description"
+    content="Support Boca Raton Billygoats Baseball on the Road to Cooperstown."
+  />
+
+  <style>
+
+    :root {
+      --bg: #050806;
+      --bg2: #0b110c;
+
+      --panel: #101810;
+      --panel2: #182318;
+
+      --green: #176b35;
+      --green-light: #2f9a50;
+
+      --yellow: #f1cf3e;
+      --yellow-light: #ffe47d;
+
+      --white: #ffffff;
+      --silver: #d9dfd9;
+      --muted: #a7b2a8;
+
+      --danger: #ff6876;
+      --success: #3cdf9a;
+
+      --border:
+        rgba(
+          241,
+          207,
+          62,
+          0.42
+        );
+    }
+
+
+    * {
+      box-sizing: border-box;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+      margin: 0;
+
+      min-height: 100vh;
+
+      font-family:
+        Inter,
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      color: var(--white);
+
+      background:
+
+        radial-gradient(
+          circle at top,
+          rgba(
+            47,
+            154,
+            80,
+            0.20
+          ),
+          transparent 35%
+        ),
+
+        radial-gradient(
+          circle at 85% 15%,
+          rgba(
+            241,
+            207,
+            62,
+            0.10
+          ),
+          transparent 28%
+        ),
+
+        linear-gradient(
+          180deg,
+          #071008 0%,
+          #020503 100%
+        );
+    }
+
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    button,
+    input {
+      font: inherit;
+    }
+
+
+    button {
+      cursor: pointer;
+    }
+
+
+    .page-shell {
+      width:
+        min(
+          1180px,
+          94%
+        );
+
+      margin: 0 auto;
+
+      padding:
+        34px
+        0
+        80px;
+    }
+
+
+    /* HERO */
+
+
+    .hero {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+
+    .team-logo {
+      display: block;
+
+      width:
+        min(
+          460px,
+          88vw
+        );
+
+      max-height: 280px;
+
+      object-fit: contain;
+
+      margin:
+        0 auto 22px;
+
+      filter:
+        drop-shadow(
+          0 0 22px
+          rgba(
+            241,
+            207,
+            62,
+            0.20
+          )
+        );
+    }
+
+
+    .team-kicker {
+      margin-bottom: 12px;
+
+      color: var(--yellow);
+
+      font-size: 13px;
+
+      font-weight: 900;
+
+      letter-spacing: 0.20em;
+
+      text-transform: uppercase;
+    }
+
+
+    .hero-title {
+      margin: 0;
+
+      font-size:
+        clamp(
+          52px,
+          9vw,
+          108px
+        );
+
+      line-height: 0.84;
+
+      font-weight: 1000;
+
+      font-style: italic;
+
+      letter-spacing: -0.045em;
+
+      text-transform: uppercase;
+
+      text-shadow:
+        4px 4px 0 var(--green),
+        7px 7px 0 rgba(241,207,62,.20);
+    }
+
+
+    .hero-title .road {
+      display: block;
+
+      color: var(--white);
+    }
+
+
+    .hero-title .coop {
+      display: block;
+
+      margin-top: 12px;
+
+      color: var(--yellow);
+    }
+
+
+    .hero-subtitle {
+      width:
+        min(
+          760px,
+          95%
+        );
+
+      margin:
+        30px auto 0;
+
+      color: var(--silver);
+
+      font-size: 16px;
+
+      line-height: 1.65;
+    }
+
+
+    /* PLAYER SECTION */
+
+
+    .choose-section {
+      margin-top: 48px;
+    }
+
+
+    .choose-title {
+      margin: 0;
+
+      text-align: center;
+
+      color: var(--white);
+
+      font-size:
+        clamp(
+          30px,
+          5vw,
+          48px
+        );
+
+      font-style: italic;
+
+      font-weight: 1000;
+
+      text-transform: uppercase;
+    }
+
+
+    .choose-subtitle {
+      margin:
+        10px
+        0
+        28px;
+
+      text-align: center;
+
+      color: var(--muted);
+
+      font-size: 14px;
+    }
+
+
+    .player-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(
+          3,
+          minmax(
+            0,
+            1fr
+          )
+        );
+
+      gap: 16px;
+    }
+
+
+    .player-card {
+      min-height: 104px;
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 16px;
+
+      padding: 18px;
+
+      border:
+        1px solid
+        var(--border);
+
+      border-radius: 16px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(
+            18,
+            34,
+            20,
+            0.97
+          ),
+          rgba(
+            4,
+            9,
+            5,
+            0.98
+          )
+        );
+
+      box-shadow:
+        0 12px 30px
+        rgba(
+          0,
+          0,
+          0,
+          0.30
+        );
+
+      transition:
+        0.16s ease;
+    }
+
+
+    .player-card:hover {
+      transform:
+        translateY(
+          -3px
+        );
+
+      border-color:
+        var(--yellow);
+
+      box-shadow:
+        0 16px 34px
+        rgba(
+          0,
+          0,
+          0,
+          0.40
+        );
+    }
+
+
+    .number {
+      flex:
+        0 0 58px;
+
+      width: 58px;
+      height: 58px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      border-radius: 50%;
+
+      background:
+        linear-gradient(
+          145deg,
+          var(--yellow-light),
+          var(--yellow)
+        );
+
+      color:
+        #102313;
+
+      border:
+        3px solid
+        var(--green-light);
+
+      font-size: 21px;
+
+      font-weight: 1000;
+
+      box-shadow:
+        0 4px 16px
+        rgba(
+          241,
+          207,
+          62,
+          0.18
+        );
+    }
+
+
+    .player-info {
+      min-width: 0;
+    }
+
+
+    .player-name {
+      display: block;
+
+      color: white;
+
+      font-size: 18px;
+
+      font-weight: 900;
+    }
+
+
+    .support-text {
+      display: block;
+
+      margin-top: 7px;
+
+      color: var(--yellow);
+
+      font-size: 11px;
+
+      font-weight: 900;
+
+      letter-spacing: 0.08em;
+
+      text-transform: uppercase;
+    }
+
+
+    .arrow {
+      margin-left: auto;
+
+      padding-left: 10px;
+
+      color: var(--yellow);
+
+      font-size: 25px;
+
+      font-weight: 900;
+    }
+
+
+    /* GENERAL DONATION */
+
+
+    .general-donation {
+      margin-top: 52px;
+
+      padding: 34px;
+
+      border:
+        1px solid
+        var(--border);
+
+      border-radius: 22px;
+
+      background:
+
+        radial-gradient(
+          circle at top,
+          rgba(
+            241,
+            207,
+            62,
+            0.07
+          ),
+          transparent 55%
+        ),
+
+        linear-gradient(
+          145deg,
+          rgba(
+            22,
+            39,
+            23,
+            0.97
+          ),
+          rgba(
+            5,
+            10,
+            5,
+            0.99
+          )
+        );
+
+      box-shadow:
+        0 18px 50px
+        rgba(
+          0,
+          0,
+          0,
+          0.28
+        );
+    }
+
+
+    .general-kicker {
+      text-align: center;
+
+      color: var(--yellow);
+
+      font-size: 12px;
+
+      font-weight: 900;
+
+      letter-spacing: 0.18em;
+
+      text-transform: uppercase;
+    }
+
+
+    .general-title {
+      margin:
+        8px
+        0
+        10px;
+
+      text-align: center;
+
+      color: white;
+
+      font-size:
+        clamp(
+          30px,
+          5vw,
+          44px
+        );
+
+      font-style: italic;
+
+      font-weight: 1000;
+
+      text-transform: uppercase;
+    }
+
+
+    .general-description {
+      max-width: 690px;
+
+      margin:
+        0 auto 25px;
+
+      text-align: center;
+
+      color: var(--silver);
+
+      line-height: 1.6;
+    }
+
+
+    .general-form {
+      width:
+        min(
+          620px,
+          100%
+        );
+
+      margin: 0 auto;
+    }
+
+
+    .general-field {
+      margin-bottom: 16px;
+    }
+
+
+    .general-field label {
+      display: block;
+
+      margin-bottom: 8px;
+
+      color: var(--yellow);
+
+      font-size: 12px;
+
+      font-weight: 900;
+
+      letter-spacing: 0.08em;
+
+      text-transform: uppercase;
+    }
+
+
+    .general-field input {
+      width: 100%;
+
+      min-height: 51px;
+
+      padding:
+        13px 15px;
+
+      border:
+        1px solid
+        rgba(
+          255,
+          255,
+          255,
+          0.18
+        );
+
+      border-radius: 11px;
+
+      outline: none;
+
+      background:
+        #09100a;
+
+      color: white;
+
+      font-size: 16px;
+    }
+
+
+    .general-field input:focus {
+      border-color:
+        var(--yellow);
+
+      box-shadow:
+        0 0 0 3px
+        rgba(
+          241,
+          207,
+          62,
+          0.08
+        );
+    }
+
+
+    .amount-wrap {
+      position: relative;
+    }
+
+
+    .amount-symbol {
+      position: absolute;
+
+      left: 15px;
+
+      top: 50%;
+
+      transform:
+        translateY(
+          -50%
+        );
+
+      color: var(--yellow);
+
+      font-size: 19px;
+
+      font-weight: 900;
+    }
+
+
+    .amount-wrap input {
+      padding-left: 35px;
+    }
+
+
+    .anonymous-option {
+      display: flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+      margin:
+        8px
+        0
+        20px;
+
+      color: var(--silver);
+
+      font-size: 14px;
+
+      font-weight: 800;
+    }
+
+
+    .anonymous-option input {
+      width: 18px;
+      height: 18px;
+
+      accent-color:
+        var(--green-light);
+    }
+
+
+    .general-button {
+      width: 100%;
+
+      min-height: 52px;
+
+      border: 0;
+
+      border-radius: 999px;
+
+      background:
+        linear-gradient(
+          90deg,
+          var(--yellow),
+          var(--yellow-light)
+        );
+
+      color:
+        #102313;
+
+      font-size: 15px;
+
+      font-weight: 1000;
+
+      text-transform: uppercase;
+    }
+
+
+    .general-button:hover {
+      transform:
+        translateY(
+          -1px
+        );
+    }
+
+
+    .general-button:disabled {
+      opacity: .5;
+      cursor: not-allowed;
+    }
+
+
+    .general-note {
+      margin:
+        16px
+        0
+        0;
+
+      color: var(--muted);
+
+      font-size: 12px;
+
+      line-height: 1.5;
+
+      text-align: center;
+    }
+
+
+    .general-status {
+      display: none;
+
+      margin-top: 15px;
+
+      padding:
+        12px 14px;
+
+      border-radius: 10px;
+
+      text-align: center;
+
+      font-size: 14px;
+
+      font-weight: 800;
+    }
+
+
+    .general-status.error {
+      display: block;
+
+      color: #ffb5b8;
+
+      border:
+        1px solid
+        rgba(
+          255,
+          80,
+          90,
+          .45
+        );
+
+      background:
+        rgba(
+          255,
+          80,
+          90,
+          .10
+        );
+    }
+
+
+    .general-status.success {
+      display: block;
+
+      color: #a7f3c0;
+
+      border:
+        1px solid
+        rgba(
+          34,
+          197,
+          94,
+          .40
+        );
+
+      background:
+        rgba(
+          34,
+          197,
+          94,
+          .10
+        );
+    }
+
+
+    .footer {
+      margin-top: 48px;
+
+      text-align: center;
+
+      color: var(--muted);
+
+      font-size: 13px;
+
+      line-height: 1.7;
+    }
+
+
+    .footer strong {
+      color: white;
+    }
+
+
+    @media (
+      max-width:
+      800px
+    ) {
+
+      .player-grid {
+        grid-template-columns:
+          repeat(
+            2,
+            minmax(
+              0,
+              1fr
+            )
+          );
+      }
+
+    }
+
+
+    @media (
+      max-width:
+      560px
+    ) {
+
+      /*
+        ONE MOBILE HERO RULE ONLY.
+        NO DUPLICATE OVERRIDES.
+      */
+
+      .hero-title {
+        font-size: 16.7vw;
+        line-height: 0.84;
+      }
+
+
+      .hero-title .coop {
+        display: block;
+
+        font-size: 12.9vw;
+
+        letter-spacing:
+          -0.075em;
+
+        white-space: nowrap;
+
+        width: 100%;
+      }
+
+
+      .page-shell {
+        width: 94%;
+
+        padding-top: 20px;
+      }
+
+
+      .team-logo {
+        width:
+          min(
+            360px,
+            88vw
+          );
+      }
+
+
+      .team-kicker {
+        font-size: 11px;
+
+        letter-spacing:
+          0.12em;
+      }
+
+
+      .player-grid {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+      }
+
+
+      .player-card {
+        min-height: 90px;
+      }
+
+
+      .number {
+        width: 56px;
+        height: 56px;
+
+        font-size: 21px;
+      }
+
+
+      .player-name {
+        font-size: 17px;
+      }
+
+
+      .general-donation {
+        padding:
+          25px
+          17px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <main class="page-shell">
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+
+      <img
+        src="/billygoats-logo.png"
+        alt="Boca Raton Billygoats"
+        class="team-logo"
+      />
+
+
+      <div class="team-kicker">
+        BOCA RATON BILLYGOATS BASEBALL
+      </div>
+
+
+      <h1 class="hero-title">
+
+        <span class="road">
+          Road to
+        </span>
+
+        <span class="coop">
+          Cooperstown
+        </span>
+
+      </h1>
+
+
+      <p class="hero-subtitle">
+
+        Help the Boca Raton Billygoats make the Cooperstown dream
+        a reality. Choose the player you would like to support
+        and sponsor one or more baseballs.
+
+      </p>
+
+
+    </section>
+
+
+
+    <!-- PLAYERS -->
+
+    <section class="choose-section">
+
+
+      <h2 class="choose-title">
+        Choose Your Player
+      </h2>
+
+
+      <p class="choose-subtitle">
+        Select a player below to visit their individual fundraiser.
+      </p>
+
+
+
+      <div class="player-grid">
+
+
+        <a
+          class="player-card"
+          href="/fundraiser.html?player=nathaniel-bennett"
+        >
+
+          <span class="number">
+            #1
+          </span>
+
+          <span class="player-info">
+
+            <span class="player-name">
+              Nathaniel Bennett
+            </span>
+
+            <span class="support-text">
+              Support Nathaniel
+            </span>
+
+          </span>
+
+          <span class="arrow">
+            ›
+          </span>
+
+        </a>
+
+
+
+        <a
+          class="player-card"
+          href="/fundraiser.html?player=asher-dvor"
+        >
+
+          <span class="number">
+            #5
+          </span>
+
+          <span class="player-info">
+
+            <span class="player-name">
+              Asher Dvor
+            </span>
+
+            <span class="support-text">
+              Support Asher
+            </span>
+
+          </span>
+
+          <span class="arrow">
+            ›
+          </span>
+
+        </a>
+
+
+
+        <a
+          class="player-card"
+          href="/fundraiser.html?player=parker-bottfeld"
+        >
+
+          <span class="number">
+            #6
+          </span>
+
+          <span class="player-info">
+
+            <span class="player-name">
+              Parker Bottfeld
+            </span>
+
+            <span class="support-text">
+              Support Parker
+            </span>
+
+          </span>
+
+          <span class="arrow">
+            ›
+          </span>
+
+        </a>
+
+
+
+        <a
+          class="player-card"
+          href="/fundraiser.html?player=henry-goldberg"
+        >
+
+          <span class="number">
+            #7
+          </span>
+
+          <span class="player-info">
+
+            <span class="player-name">
+              Henry Goldberg
+            </span>
+
+            <span class="support-text">
+              Support Henry
+            </span>
+
+          </span>
+
+          <span class="arrow">
+            ›
+          </span>
+
+        </a>
+
+
+
+        <a
+          class="player-card"
+          href="/fundraiser.html?player=patrick-butera"
+        >
+
+          <span class="number">
+            #11
+          </span>
+
+          <span class="player-info">
+
+            <span class="player-name">
+              Patrick Butera
+            </span>
+
+            <span class="support-text">
+              Support Patrick
+            </span>
+
+          </span>
+
+          <span class="arrow">
+            ›
+          </span>
+
+        </a>
+
+
+
+        <a
+          class="player-card"
+          href="/fundraiser.html?player=oliver-hawkinson"
+        >
+
+          <span class="number">
+            #14
+          </span>
+
+          <span class="player-info">
+
+            <span class="player-name">
+              Oliver Hawkinson
+            </span>
+
+            <span class="support-text">
+              Support Oliver
+            </span>
+
+          </span>
+
+          <span class="arrow">
+            ›
+          </span>
+
+        </a>
+
+
+
+        <a
+          class="player-card"
+          href="/fundraiser.html?player=ryan-litvack"
+        >
+
+          <span class="number">
+            #15
+          </span>
+
+          <span class="player-info">
+
+            <span class="player-name">
+              Ryan Litvack
+            </span>
+
+            <span class="support-text">
+              Support Ryan
+            </span>
+
+          </span>
+
+          <span class="arrow">
+            ›
+          </span>
+
+        </a>
+
+
+
+        <a
+          class="player-card"
+          href="/fundraiser.html?player=teddy-elzahr"
+        >
+
+          <span class="number">
+            #23
+          </span>
+
+          <span class="player-info">
+
+            <span class="player-name">
+              Teddy Elzahr
+            </span>
+
+            <span class="support-text">
+              Support Teddy
+            </span>
+
+          </span>
+
+          <span class="arrow">
+            ›
+          </span>
+
+        </a>
+
+
+
+        <a
+          class="player-card"
+          href="/fundraiser.html?player=anthony-gibell"
+        >
+
+          <span class="number">
+            #25
+          </span>
+
+          <span class="player-info">
+
+            <span class="player-name">
+              Anthony Gibell
+            </span>
+
+            <span class="support-text">
+              Support Anthony
+            </span>
+
+          </span>
+
+          <span class="arrow">
+            ›
+          </span>
+
+        </a>
+
+
+
+        <a
+          class="player-card"
+          href="/fundraiser.html?player=gianfranco-milano"
+        >
+
+          <span class="number">
+            #27
+          </span>
+
+          <span class="player-info">
+
+            <span class="player-name">
+              Gianfranco Milano
+            </span>
+
+            <span class="support-text">
+              Support Gianfranco
+            </span>
+
+          </span>
+
+          <span class="arrow">
+            ›
+          </span>
+
+        </a>
+
+
+
+        <a
+          class="player-card"
+          href="/fundraiser.html?player=jose-nunez"
+        >
+
+          <span class="number">
+            #32
+          </span>
+
+          <span class="player-info">
+
+            <span class="player-name">
+              Jose Nunez
+            </span>
+
+            <span class="support-text">
+              Support Jose
+            </span>
+
+          </span>
+
+          <span class="arrow">
+            ›
+          </span>
+
+        </a>
+
+
+
+        <a
+          class="player-card"
+          href="/fundraiser.html?player=evan-hearn"
+        >
+
+          <span class="number">
+            #34
+          </span>
+
+          <span class="player-info">
+
+            <span class="player-name">
+              Evan Hearn
+            </span>
+
+            <span class="support-text">
+              Support Evan
+            </span>
+
+          </span>
+
+          <span class="arrow">
+            ›
+          </span>
+
+        </a>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- GENERAL DONATION -->
+
+    <section class="general-donation">
+
+
+      <div class="general-kicker">
+        Support the Entire Team
+      </div>
+
+
+      <h2 class="general-title">
+        General Team Donation
+      </h2>
+
+
+      <p class="general-description">
+
+        Want to support the Boca Raton Billygoats without selecting
+        a player or purchasing a baseball?
+        Enter any custom donation amount below.
+
+      </p>
+
+
+
+      <div class="general-form">
+
+
+        <div class="general-field">
+
+          <label
+            for="generalDonationAmount"
+          >
+            Donation Amount
+          </label>
+
+
+          <div class="amount-wrap">
+
+            <span class="amount-symbol">
+              $
+            </span>
+
+
+            <input
+              id="generalDonationAmount"
+              type="number"
+              min="1"
+              step="0.01"
+              inputmode="decimal"
+              placeholder="100.00"
+            />
+
+          </div>
+
+        </div>
+
+
+
+        <div class="general-field">
+
+          <label
+            for="generalDonorName"
+          >
+            Donor Name
+          </label>
+
+
+          <input
+            id="generalDonorName"
+            type="text"
+            maxlength="50"
+            autocomplete="name"
+            placeholder="Example: The Smith Family"
+          />
+
+        </div>
+
+
+
+        <label class="anonymous-option">
+
+          <input
+            id="generalAnonymous"
+            type="checkbox"
+          />
+
+          <span>
+            Remain Anonymous
+          </span>
+
+        </label>
+
+
+
+        <button
+          id="generalDonateButton"
+          class="general-button"
+          type="button"
+        >
+          Donate to the Billygoats
+        </button>
+
+
+
+        <div
+          id="generalStatus"
+          class="general-status"
+        ></div>
+
+
+
+        <p class="general-note">
+
+          General donations support the Boca Raton Billygoats directly
+          and do not purchase or reserve a baseball.
+
+        </p>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <footer class="footer">
+
+      <strong>
+        BOCA RATON BILLYGOATS
+      </strong>
+
+      <br />
+
+      Road to Cooperstown
+
+    </footer>
+
+
+
+    <script>
+
+
+      const generalDonationAmount =
+        document.getElementById(
+          "generalDonationAmount"
+        );
+
+
+      const generalDonorName =
+        document.getElementById(
+          "generalDonorName"
+        );
+
+
+      const generalAnonymous =
+        document.getElementById(
+          "generalAnonymous"
+        );
+
+
+      const generalDonateButton =
+        document.getElementById(
+          "generalDonateButton"
+        );
+
+
+      const generalStatus =
+        document.getElementById(
+          "generalStatus"
+        );
+
+
+
+      function showGeneralStatus(
+        message,
+        type
+      ) {
+
+        generalStatus.textContent =
+          message;
+
+
+        generalStatus.className =
+          "general-status " +
+          type;
+
+      }
+
+
+
+      generalAnonymous.addEventListener(
+        "change",
+        () => {
+
+          if (
+            generalAnonymous.checked
+          ) {
+
+            generalDonorName.value =
+              "";
+
+
+            generalDonorName.disabled =
+              true;
+
+
+            generalDonorName.placeholder =
+              "Anonymous donation";
+
+          } else {
+
+            generalDonorName.disabled =
+              false;
+
+
+            generalDonorName.placeholder =
+              "Example: The Smith Family";
+
+          }
+
+        }
+      );
+
+
+
+      generalDonateButton.addEventListener(
+        "click",
+        async () => {
+
+
+          const amount =
+            Number(
+              generalDonationAmount.value
+            );
+
+
+          let donorName;
+
+
+          if (
+            generalAnonymous.checked
+          ) {
+
+            donorName =
+              "Anonymous";
+
+          } else {
+
+            donorName =
+              generalDonorName
+                .value
+                .trim()
+                .replace(
+                  /\s+/g,
+                  " "
+                );
+
+
+            if (
+              !donorName
+            ) {
+
+              showGeneralStatus(
+                "Please enter a donor name or select Remain Anonymous.",
+                "error"
+              );
+
+
+              generalDonorName.focus();
+
+
+              return;
+
+            }
+
+          }
+
+
+
+          if (
+            !Number.isFinite(
+              amount
+            ) ||
+            amount < 1
+          ) {
+
+            showGeneralStatus(
+              "Please enter a donation amount of at least $1.",
+              "error"
+            );
+
+
+            generalDonationAmount.focus();
+
+
+            return;
+
+          }
+
+
+
+          generalDonateButton.disabled =
+            true;
+
+
+          generalDonateButton.textContent =
+            "Creating Checkout...";
+
+
+          showGeneralStatus(
+            "Preparing secure checkout...",
+            "success"
+          );
+
+
+
+          try {
+
+
+            const response =
+              await fetch(
+                "/api/create-general-donation",
+                {
+
+                  method:
+                    "POST",
+
+                  headers: {
+
+                    "Content-Type":
+                      "application/json"
+
+                  },
+
+                  body:
+                    JSON.stringify({
+
+                      amount,
+
+                      donorName,
+
+                      anonymous:
+                        generalAnonymous.checked
+
+                    })
+
+                }
+              );
+
+
+            const data =
+              await response.json();
+
+
+
+            if (
+              !response.ok
+            ) {
+
+              throw new Error(
+                data.error ||
+                "Unable to create donation checkout."
+              );
+
+            }
+
+
+
+            if (
+              !data.url
+            ) {
+
+              throw new Error(
+                "Checkout URL was not returned."
+              );
+
+            }
+
+
+
+            window.location.href =
+              data.url;
+
+
+
+          } catch (
+            error
+          ) {
+
+
+            console.error(
+              error
+            );
+
+
+            showGeneralStatus(
+              error.message ||
+              "General donation checkout is unavailable.",
+              "error"
+            );
+
+
+            generalDonateButton.disabled =
+              false;
+
+
+            generalDonateButton.textContent =
+              "Donate to the Billygoats";
+
+          }
+
+        }
+      );
+
+
+
+      const params =
+        new URLSearchParams(
+          window.location.search
+        );
+
+
+
+      if (
+        params.get(
+          "general_donation"
+        ) ===
+        "success"
+      ) {
+
+        showGeneralStatus(
+          "Thank you for supporting the Boca Raton Billygoats!",
+          "success"
+        );
+
+
+        document
+          .querySelector(
+            ".general-donation"
+          )
+          ?.scrollIntoView(
+            {
+              behavior:
+                "smooth"
+            }
+          );
+
+      }
+
+
+
+      if (
+        params.get(
+          "general_donation"
+        ) ===
+        "canceled"
+      ) {
+
+        showGeneralStatus(
+          "Donation checkout was canceled. No payment was made.",
+          "error"
+        );
+
+      }
+
+
+    </script>
+
+
+  </main>
+
+
+</body>
+
+</html>
